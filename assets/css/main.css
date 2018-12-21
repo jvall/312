@@ -3667,4 +3667,10 @@ input, select, textarea {
 		background-color: #ffffff;
 		min-height: 100vh;
 		opacity: 1;
-	}
+  }
+  
+
+/* Misc */
+h3.tagline {
+  font-size: 1.6em;
+}
