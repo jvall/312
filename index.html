@@ -117,37 +117,32 @@
                   <header class="major">
                     <h1>Get Involved</h1>
                   </header>
-                  <p>The best ways to stay in touch with what's happening with 3:12 are our newsletter and <a href="https://www.facebook.com/groups/576675142518907/" target="_blank" rel="noopener noreferrer">Facebook group</a>.</p>
+                  <p>The best ways to stay in touch with what's happening with 3:12 are our monthly newsletter and <a href="https://www.facebook.com/groups/576675142518907/" target="_blank" rel="noopener noreferrer">Facebook group</a>.</p>
                   <div class="row">
                     <div class="col-6 col-12-small">
                       <header>
                         <h2>Newsletter Signup</h2>
                       </header>      
-                      <!-- Begin Mailchimp Signup Form -->
-                      <div id="mc_embed_signup">
-                        <form action="https://parkcommunitychurch.us1.list-manage.com/subscribe/post?u=214d6cd51d24acce5a470344b&amp;id=b54e8d06f4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                          <div id="mc_embed_signup_scroll">
-                            <div class="row gtr-uniform">
-                              <div class="col-12">
-                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" />
-                              </div>
-                              <!-- Break -->
-                              <div class="col-12">
-                                <ul class="actions">
-                                  <li><input type="submit" value="Subscribe" class="primary" id="mc-embedded-subscribe"/></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_214d6cd51d24acce5a470344b_b54e8d06f4" tabindex="-1" value=""></div>
+                      <form id="subscription-form" method="post" action="#">
+                        <div class="row gtr-uniform">
+                          <div class="col-12">
+                            <input type="email" value="" name="email" class="email" id="mailchimp-email" placeholder="Email" />
                           </div>
-                        </form>
-                      </div>
+                          <div class="col-12">
+                            <ul class="actions">
+                              <li><input type="submit" value="Subscribe" class="primary" id="mc-embedded-subscribe"/></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <p id="subscription-success" class="remove-form-element">Thank you! You're in the know for all 3:12 events.</p>
+                        <p id="subscription-field-error" class="hide-form-element">Error: please make sure you've filled out the email field correctly.</p>
+                      </form>
                     </div>
                     <div class="col-6 col-12-small">
                       <header>
                         <h2>Contact the Team</h2>
                       </header>          
-                      <form method="post" action="#">
+                      <form id="contact-form" method="post" action="#">
                         <div class="row gtr-uniform">
                           <div class="col-6 col-12-xsmall">
                             <input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -158,14 +153,16 @@
                           <div class="col-12">
                             <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
                           </div>
-                          <!-- Break -->
+                          <p id="contact-missing-field" class="error-msg remove-form-element">Error: please make sure you have filled out all fields correctly and try again.</p>
+                          <p id="contact-api-error" class="error-msg remove-form-element">Error: the was a problem sending your email to the server; please try again in a few minutes.</p>    
                           <div class="col-12">
                             <ul class="actions">
-                              <li><input type="submit" value="Send Message" class="primary" /></li>
+                              <li><button id="contact-submit-button" type="submit" class="primary" />Send Message</button>
                             </ul>
                           </div>
                         </div>
                       </form>
+                      <p id="contact-success" class="success-msg remove-form-element">Thank you! A member of our team will be in touch shortly.</p>
                     </div>
                   </div>
                 </div>
@@ -236,7 +233,7 @@
                     <h2 id="content">How are you funded?</h2>
                     <p>We fund ourselves on entrance fees and donations from our attendees. If you feel compelled to donate to our ministry, please reach out by filling out the contact form above. We thank you in advance for your kind generosity.</p>
                     <h2 id="content">Isn't this a reboot of the old singles ministry?</h2>
-                    <p>Yes! We're re-branding it as a professionals group to be more inclusive of the young adults community at large; we encourage married couples to attend too.</p>
+                    <p>Yes! We're re-branding it as a professionals group to be more inclusive of the young adults community at large; we encourage married couples to attend as well.</p>
                     <h2 id="content">Are you a dating service?</h2>
                     <p>No. While we recognize that dating relationships can form out of 3:12, our sole purpose is to build community with the ultimate goal of strengthening our relationships with God.</p>
                     <h2 id="content">Can I submit a suggestion for an event?</h2>
@@ -268,6 +265,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/form.js"></script>
 	</body>
 </html>

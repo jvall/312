@@ -3678,8 +3678,20 @@ h3.tagline {
   font-size: 1.6em;
 }
 
-#mc_embed_signup {
-  background: #fff;
-  clear: left;
-  font: 14px Helvetica,Arial,sans-serif;
+.hide-form-element {
+  visibility: hidden;
+}
+
+.remove-form-element {
+  display: none;
+}
+
+.error-msg {
+  font-weight: bold;
+  color: #ff3509;
+}
+
+.success-msg {
+  font-weight: bold;
+  color: #00c00c;
 }
